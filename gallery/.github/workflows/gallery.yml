@@ -3,7 +3,7 @@ name: Update Gallery List
 on:
   push:
     paths:
-      - 'media/**'   # Папкадагы файлдар өзгөргөндө иштейт
+      - 'gallery/media/**'   # Папкадагы файлдар өзгөргөндө иштейт
   workflow_dispatch:          # Кол менен да иштетсе болот
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Generate gallery.json
         run: |
           echo "[" > gallery.json
-          find images/gallery -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) \
+          find gallery/media -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) \
           | sed 's/"/\\"/g' | sed 's/^/  "/;s/$/",/' >> gallery.json
           sed -i '$ s/,$//' gallery.json
           echo "]" >> gallery.json
