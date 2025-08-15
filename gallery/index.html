@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <div id="gallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;"></div>
+  
+  <script>
+    fetch('gallery.json')
+      .then(res => res.json())
+      .then(images => {
+        const gallery = document.getElementById('gallery');
+        images.forEach(src => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.style.width = "100%";
+          img.style.borderRadius = "8px";
+          img.style.cursor = "pointer";
+          gallery.appendChild(img);
+        });
+      });
+  </script>
+</body>
+
+</html>
