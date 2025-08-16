@@ -15,11 +15,11 @@ jobs:
         run: |
           echo "[" > gallery/gallery.json
           first=true
-          for file in gallery/images/*; do
+          for file in gallery/media/*; do
             [ -f "$file" ] || continue
             [ "$first" = true ] && first=false || echo "," >> gallery/gallery.json
             name=$(basename "$file")
-            echo "  {\"title\": \"${name%.*}\", \"src\": \"images/$name\"}" >> gallery/gallery.json
+            echo "  {\"title\": \"${name%.*}\", \"src\": \"media/$name\"}" >> gallery/gallery.json
           done
           echo "]" >> gallery/gallery.json
 
