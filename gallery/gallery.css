@@ -1,0 +1,32 @@
+* {
+  webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.headerTitle {
+  text-align: center;
+}
+
+.gallery {
+  column-width: 150px;
+  padding: auto;
+  overflow: hidden;
+}
+
+.gallery-item {
+  width: 100%;
+  min-width: 120px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+}
