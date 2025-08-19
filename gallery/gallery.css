@@ -5,6 +5,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+body { 
+  width: 100%;
+}
+
 .headerTitle {
   text-align: center;
 }
