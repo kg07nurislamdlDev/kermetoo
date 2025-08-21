@@ -1,0 +1,21 @@
+{
+  "name": "Керме-Тоо айылы",
+  "short_name": "Керме-Тоо",
+  "description": "Kermetoo.online – Керме-Тоо айылы сайты. Сүрөттөр, маалыматтар, жаңылыктар.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/access/images/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/access/images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
